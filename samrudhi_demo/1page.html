@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Samrudhi demo</title>
+</head>
+
+<body> 
+   <div id="buttons-container">
+        <button id="btn-0">Button 1</button>
+        <button id="btn-1">Button 2</button>
+        <button id="btn-2">Button 3</button> 
+    </div>
+
+    <p id="prize"></p>
+
+    <script>
+
+        const prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+
+        document.getElementById('buttons-container').addEventListener('click', function (event)
+         {
+            if (event.target.tagName === 'BUTTON') {
+                const buttonId = event.target.id.slice(4);  
+                (buttonId >= 0 && buttonId < prizes.length)
+                { document.getElementById('prize').textContent = prizes[buttonId]; }
+            }
+        });
+    </script>
+
+
+</body>
+
+
+
+</html>
